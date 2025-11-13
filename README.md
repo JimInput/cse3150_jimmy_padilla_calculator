@@ -53,7 +53,7 @@ large_sum = FileCalculator().sum_file(csv_path)
 ```
 
 ## Installation
-* [roa\_collector](#roa\_collector)
+* [cse3150\_jimmy\_padilla\_calculator](#cse3150\_jimmy\_padilla\_calculator)
 
 Install python and pip if you have not already.
 
