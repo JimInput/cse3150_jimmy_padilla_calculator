@@ -1,8 +1,11 @@
 include README.md
 include LICENSE.txt
-global-include **.typed
-global-include **.pyi
-global-include **.csv
+recursive-include cse3150_jimmy_padilla_calculator *.typed
+recursive-include cse3150_jimmy_padilla_calculator *.py
+recursive-include cse3150_jimmy_padilla_calculator *.pyi
+recursive-include cse3150_jimmy_padilla_calculator *.csv
 include tox.ini
 # Need since scripts has dunder init
+global-exclude __pycache__
+global-exclude *.pyc
 exclude scripts/**
