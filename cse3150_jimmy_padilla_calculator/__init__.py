@@ -1,3 +1,3 @@
-from .calculator import Calculator # omit .py
+from .calculator import Calculator  # omit .py
 
 __all__ = ["Calculator"]

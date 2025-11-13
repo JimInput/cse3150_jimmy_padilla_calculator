@@ -4,7 +4,21 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "cse3150_jimmy_padilla_calculator"
-version = "0.2.0"
+version = "0.4.0"
+dependencies = [
+    "tqdm~=4.0",
+]
 
 [project.scripts]
 cse3150_jimmy_padilla_calculator = "cse3150_jimmy_padilla_calculator.__main__:main"
+
+[project.optional-dependencies]
+test = [
+    # tie these to a very specific version
+    "types-tqdm",
+    "pytest",
+    "mypy",
+    "ruff",
+    "pre-commit",
+    "tox",
+]
