@@ -24,7 +24,8 @@ test = [
 ]
 
 [tool.setuptools]
-packages = ["cse3150_jimmy_padilla_calculator", "cse3150_jimmy_padilla_calculator.file_calculator", "cse3150_jimmy_padilla_calculator.tests"]
+include-package-data = true
 
-[tool.setuptools.package-data]
-cse3150_jimmy_padilla_calculator = ["**/*.csv", "**/*.typed", "**/*.pyi"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cse3150_jimy_padilla_calculator*"]
