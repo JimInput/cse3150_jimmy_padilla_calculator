@@ -28,4 +28,4 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["cse3150_jimy_padilla_calculator*"]
+include = ["cse3150_jimmy_padilla_calculator*"]
