@@ -12,7 +12,7 @@ from cse3150_jimmy_padilla_calculator.calculator import Calculator
 class FileCalculator(Calculator):
     def sum_file(self, path=None) -> int:
         if path is None:
-            path = Path(__file__).parent / "nums.csv"
+            path = Path(__file__).resolve().parent / "nums.csv"
         with tqdm(total=100_000_000, desc="summing file") as pbar:
             total = 0
             with path.open() as f:
