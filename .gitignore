@@ -4,7 +4,6 @@ war_game
 *.out
 
 # Output files
-*.csv
 !test_data/*.csv
 
 # Python
