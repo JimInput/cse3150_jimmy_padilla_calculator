@@ -23,9 +23,11 @@ test = [
     "tox",
 ]
 
-[tool.setuptools]
-include-package-data = true
-
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["cse3150_jimmy_padilla_calculator*"]
+
+[tool.setuptools.package-data]
+"cse3150_jimmy_padilla_calculator.file_calculator" = ["*.csv"]
+
+
