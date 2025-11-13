@@ -23,7 +23,7 @@ jobs:
         pip install tox tox-gh-actions
     - name: Debug - Run pytest directly
       run: |
-        pip install pytest
+        pip install -e .[test]
         pytest cse3150_jimmy_padilla_calculator/tests -vv
     - name: Test with tox
       run: tox
