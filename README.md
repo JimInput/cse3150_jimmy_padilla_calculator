@@ -2,10 +2,8 @@
 
 Informational Badges:
 
-[![PyPI version](https://badge.fury.io/py/roa_collector.svg)](https://badge.fury.io/py/roa_collector)
-![PyPy](https://img.shields.io/badge/PyPy-7.3.17-blue)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/roa_collector)](https://pypi.org/project/roa_collector/)
-![Tests](https://github.com/jfuruness/roa_collector/actions/workflows/tests.yml/badge.svg)
+![Tests](https://github.com/jiminput/cse3150_jimmy_padilla_calculator/actions/workflows/tests.yml/badge.svg)
 ![Linux](https://img.shields.io/badge/os-Linux-blue.svg)
 ![macOS Intel](https://img.shields.io/badge/os-macOS_Intel-lightgrey.svg)
 ![macOS ARM](https://img.shields.io/badge/os-macOS_ARM-lightgrey.svg)
@@ -19,10 +17,10 @@ Some Linting Badges (Where I could find them):
 [![Pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint/tree/main)
 [![try/except style: tryceratops](https://img.shields.io/badge/try%2Fexcept%20style-tryceratops%20%F0%9F%A6%96%E2%9C%A8-black)](https://github.com/guilatrova/tryceratops)
 
-# roa\_collector
+# cse3150\_jimmy\_padilla\_calculator
 
 
-### If you like the repo, it would be awesome if you could add a star to it! It really helps out the visibility. Also for any questions at all we'd love to hear from you at jfuruness@gmail.com
+### This is my repo for a example python/C++ package.
 
 * [Description](#package-description)
 * [Usage](#usage)
@@ -33,22 +31,25 @@ Some Linting Badges (Where I could find them):
 
 ## Package Description
 
-Downloads ROAs from https://rpki-validator.ripe.net/api/export.json,
-inserts them in a CSV,
-and returns them as a list of ROA dataclasses (containing asn, prefix, max_length, and ta properties, where ta is RIPE, afrinic, etc)
-
 ## Usage
-* [roa\_collector](#roa\_collector)
+* [cse3150\_jimmy\_padilla\_calculator](#cse3150\_jimmy\_padilla\_calculator)
 
 from a script:
 
 ```python
 from pathlib import Path
 
-from roa_collector import ROACollector
+from cse3150_jimmy_padilla_calculator import Calculator
+from cse3150_jimmy_padilla_calculator import FileCalculator
 
 csv_path = Path("/tmp/my_csv_path.csv")  # or set to None to avoid writing
-roas = ROACollector(csv_path).run()
+
+sum = Calculator().add(1,2)
+diff = Calculator().sub(4,1)
+prod = Calculator().mul(3,3)
+div = Calculator().div(9,2)
+
+large_sum = FileCalculator().sum_file(csv_path)
 ```
 
 ## Installation
@@ -59,23 +60,21 @@ Install python and pip if you have not already.
 Then run:
 
 ```bash
-# Needed for graphviz and Pillow
 pip3 install pip --upgrade
-pip3 install wheel
 ```
 
 For production:
 
 ```bash
-pip3 install roa_collector
+pip3 install cse3150_jimmy_padilla_calculator
 ```
 
 This will install the package and all of it's python dependencies.
 
 If you want to install the project for development:
 ```bash
-git clone https://github.com/jfuruness/roa_collector.git
-cd roa_collector
+git clone https://github.com/jiminput/cse3150_jimmy_padilla_calculator.git
+cd cse3150_jimmy_padilla_calculator
 pip3 install -e .[test]
 pre-commit install
 ```
@@ -84,28 +83,28 @@ To test the development package: [Testing](#testing)
 
 
 ## Testing
-* [roa\_collector](#roa\_collector)
+* [cse3150\_jimmy\_padilla\_calculator](#cse3150\_jimmy\_padilla\_calculator)
 
 To test the package after installation:
 
 ```
-cd roa_collector
-pytest roa_collector
-ruff check roa_collector
-ruff format roa_collector
-mypy roa_collector
+cd cse3150_jimmy_padilla_calculator
+pytest cse3150_jimmy_padilla_calculator
+ruff check cse3150_jimmy_padilla_calculator
+ruff format cse3150_jimmy_padilla_calculator
+mypy cse3150_jimmy_padilla_calculator
 ```
 
-If you want to run it across multiple environments, and have python 3.10 and 3.11 installed:
+If you want to run it across multiple environments (it only works for python 3.12 right now)
 
 ```
-cd roa_collector
+cd cse3150_jimmy_padilla_calculator
 tox --skip-missing-interpreters
 ```
 
 
 ## Development/Contributing
-* [roa\_collector](#roa\_collector)
+* [cse3150\_jimmy\_padilla\_calculator](#cse3150\_jimmy\_padilla\_calculator)
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
@@ -114,9 +113,9 @@ tox --skip-missing-interpreters
 6. Commit your changes: `git commit -am 'Add some feature'`
 7. Push to the branch: `git push origin my-new-feature`
 8. Ensure github actions are passing tests
-9. Email me at jfuruness@gmail.com if it's been a while and I haven't seen it
+9. Email me at oJimmy05o@gmail.com if it's been a while and I haven't seen it
 
 ## License
-* [roa\_collector](#roa\_collector)
+* [cse3150\_jimmy\_padilla\_calculator](#cse3150\_jimmy\_padilla\_calculator)
 
-BSD License (see license file)
+MIT License (see license file)
