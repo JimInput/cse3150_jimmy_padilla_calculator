@@ -22,3 +22,9 @@ test = [
     "pre-commit",
     "tox",
 ]
+
+[tool.setuptools]
+packages = ["cse3150_jimmy_padilla_calculator", "cse3150_jimmy_padilla_calculator.file_calculator", "cse3150_jimmy_padilla_calculator.tests"]
+
+[tool.setuptools.package-data]
+cse3150_jimmy_padilla_calculator = ["**/*.csv", "**/*.typed", "**/*.pyi"]
